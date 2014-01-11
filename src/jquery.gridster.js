@@ -2791,7 +2791,7 @@
         var actual_cols = this.cols;
         var max_cols = actual_cols + (cols || 1);
 
-        for (var c = actual_cols; c < max_cols; c++) {
+        for (var c = max_cols; c > actual_cols; c--) {
             for (var r = this.rows; r >= 1; r--) {
                 this.add_faux_cell(r, c);
             }
